@@ -7,5 +7,14 @@
     <%= f.label :details %>
     <%= f.text_field :details %>
   </div>
+  <div>
+    <% if @task.completed %>
+      <%= f.label :completed %>
+      <%= f.check_box :completed, :checked => true %>
+    <% else %>
+      <%= f.label :completed %>
+      <%= f.check_box :completed %>
+    <% end %>
+  </div>
   <%= f.submit %>
 <% end %>
